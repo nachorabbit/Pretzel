@@ -18,3 +18,7 @@ export interface TooltipProps {
   children: React.ReactNode;
   content: string;
 }
+
+export interface BackButtonProps {
+  onClick?: () => void;
+}

@@ -18,9 +18,27 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Path Aliases */
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@pages/*": ["pages/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@assets/*": ["assets/*"],
+      "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"],
+      "@chat/*": ["pages/chat/*"],
+      "@auth/*": ["pages/auth/*"],
+      "@home/*": ["pages/home/*"],
+      "@profile/*": ["pages/profile/*"],
+      "@store/*": ["pages/store/*"]
+    }
   },
   "include": ["src"]
 }

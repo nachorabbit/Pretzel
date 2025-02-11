@@ -15,6 +15,9 @@ export default {
       fontSize: {
         'pretzel': '12px',
       },
+      colors: {
+        primary: '#FF6D81',
+      },
     },
   },
   plugins: [],

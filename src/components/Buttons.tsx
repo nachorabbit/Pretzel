@@ -1,8 +1,19 @@
 import React from 'react';
-import type { ButtonProps } from '../types';
-import { Tooltip } from './Tooltip';
+import { ChevronLeft } from 'lucide-react';
+import type { ButtonProps, BackButtonProps } from '../types';
 
-export const FullButton: React.FC<ButtonProps> = ({ 
+const BackButton: React.FC<BackButtonProps> = ({ onClick }) => {
+  return (
+    <button 
+      className="flex items-center gap-1 text-[#A6A5A5] p-0"
+      onClick={onClick}
+    >
+      <ChevronLeft size={16} />
+    </button>
+  );
+};
+
+const FullButton: React.FC<ButtonProps> = ({ 
   text, 
   state = 'active', 
   backgroundColor = '#FF6E81',
@@ -87,9 +98,7 @@ export const FullButton: React.FC<ButtonProps> = ({
     </button>
   );
 
-  return state === 'disabled' ? (
-    <Tooltip content="This button is currently disabled">
-      {button}
-    </Tooltip>
-  ) : button;
+  return state === 'disabled' ? button : button;
 };
+
+export { BackButton, FullButton };
