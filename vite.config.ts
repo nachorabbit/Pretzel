@@ -9,7 +9,7 @@ const __dirname = dirname(__filename)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/PretzelChat/', // repository 이름을 base로 설정
+  base: '/Pretzel/', // 레포지토리 이름을 base로 설정
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
